@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="my" class="h-full">
+<html lang="en" class="h-full scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>အထောက်အကူပြု တရားထိုင်သင်တန်း</title>
+    <title>
+      Metta Bhavana - Loving-Kindness Meditation | Venerable PYINNYANANDA -
+      México 2026
+    </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/_sdk/element_sdk.js"></script>
     <style>
@@ -11,46 +14,36 @@
         box-sizing: border-box;
       }
 
-      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@300;400;500;600;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap");
 
-      * {
-        font-family: "Noto Sans Myanmar", sans-serif;
+      body {
+        font-family: "Lato", sans-serif;
       }
 
-      .gradient-bg {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Cormorant Garamond", serif;
       }
 
       .card-hover {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
       }
 
       .card-hover:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-      }
-
-      .lotus-pattern {
-        background-image: radial-gradient(
-            circle at 20% 50%,
-            rgba(255, 255, 255, 0.05) 0%,
-            transparent 50%
-          ),
-          radial-gradient(
-            circle at 80% 80%,
-            rgba(255, 255, 255, 0.05) 0%,
-            transparent 50%
-          );
+        transform: translateY(-10px);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
       }
 
       .fade-in {
-        animation: fadeIn 1s ease-in;
+        animation: fadeIn 1.2s ease-in;
       }
 
       @keyframes fadeIn {
         from {
           opacity: 0;
-          transform: translateY(20px);
+          transform: translateY(30px);
         }
         to {
           opacity: 1;
@@ -58,17 +51,27 @@
         }
       }
 
-      .stagger-1 {
-        animation-delay: 0.1s;
+      .lotus-pulse {
+        animation: pulse 3s ease-in-out infinite;
       }
-      .stagger-2 {
-        animation-delay: 0.2s;
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.05);
+          opacity: 0.9;
+        }
       }
-      .stagger-3 {
-        animation-delay: 0.3s;
-      }
-      .stagger-4 {
-        animation-delay: 0.4s;
+
+      .gradient-text {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
     </style>
     <style>
@@ -79,403 +82,907 @@
     <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
   </head>
   <body class="h-full">
-    <div class="w-full h-full overflow-auto">
+    <div class="w-full h-full overflow-auto" style="background-color: #ffffff">
+      <!-- Navigation Menu -->
+      <nav
+        class="fixed top-0 w-full z-50 shadow-lg backdrop-blur-md"
+        style="background-color: rgba(87, 50, 157, 0.95)"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center h-16">
+            <div class="flex items-center">
+              <img
+                src="https://raw.githubusercontent.com/wuweiclomx/Pynnyanada2026/refs/heads/main/LOGO%20PY.png"
+                alt="Metta Bhavana Logo"
+                class="h-12 mr-3"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+              <span class="text-2xl text-white font-bold">Metta Bhavana</span>
+            </div>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+              <a
+                href="#home"
+                class="text-white hover:text-yellow-200 transition-colors duration-300 font-medium"
+                >Home</a
+              >
+              <a
+                href="#welcome"
+                class="text-white hover:text-yellow-200 transition-colors duration-300 font-medium"
+                >Welcome</a
+              >
+              <a
+                href="#experience"
+                class="text-white hover:text-yellow-200 transition-colors duration-300 font-medium"
+                >Experience</a
+              >
+              <a
+                href="#metta"
+                class="text-white hover:text-yellow-200 transition-colors duration-300 font-medium"
+                >Metta Practice</a
+              >
+              <a
+                href="#deities"
+                class="text-white hover:text-yellow-200 transition-colors duration-300 font-medium"
+                >Divine Inspiration</a
+              >
+              <a
+                href="#contact"
+                class="text-white hover:text-yellow-200 transition-colors duration-300 font-medium"
+                >Contact</a
+              >
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewbox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden"
+          style="background-color: rgba(87, 50, 157, 0.98)"
+        >
+          <div class="px-2 pt-2 pb-3 space-y-1">
+            <a
+              href="#home"
+              class="block px-3 py-2 text-white hover:bg-purple-800 rounded"
+              >Home</a
+            >
+            <a
+              href="#welcome"
+              class="block px-3 py-2 text-white hover:bg-purple-800 rounded"
+              >Welcome</a
+            >
+            <a
+              href="#experience"
+              class="block px-3 py-2 text-white hover:bg-purple-800 rounded"
+              >Experience</a
+            >
+            <a
+              href="#metta"
+              class="block px-3 py-2 text-white hover:bg-purple-800 rounded"
+              >Metta Practice</a
+            >
+            <a
+              href="#deities"
+              class="block px-3 py-2 text-white hover:bg-purple-800 rounded"
+              >Divine Inspiration</a
+            >
+            <a
+              href="#contact"
+              class="block px-3 py-2 text-white hover:bg-purple-800 rounded"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </nav>
       <!-- Hero Section -->
       <section
-        class="gradient-bg lotus-pattern text-white py-20 px-6 text-center"
+        id="home"
+        class="text-white py-32 px-6 text-center relative overflow-hidden"
+        style="
+          margin-top: 64px;
+          background: linear-gradient(135deg, #57329d 0%, #e51d70 100%);
+        "
       >
-        <div class="max-w-4xl mx-auto fade-in">
-          <div class="text-6xl mb-6">🧘‍♀️</div>
-          <h1 id="main-title" class="text-5xl font-bold mb-4">
-            စိတ်အေးချမ်းမှု ရှာဖွေပါ
-          </h1>
-          <p id="subtitle" class="text-xl mb-8 opacity-90">
-            တရားထိုင်ခြင်းဖြင့် သင့်ဘဝကို ပြောင်းလဲလိုက်ပါ
-          </p>
-          <button
-            id="cta-button"
-            class="px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
-            style="background-color: #e51d70; color: white"
-          >
-            ယခုပဲ စတင်လိုက်ပါ
-          </button>
-        </div>
-      </section>
-      <!-- About Section -->
-      <section class="py-16 px-6 bg-white">
-        <div class="max-w-6xl mx-auto">
-          <div class="text-center mb-12 fade-in stagger-1">
-            <h2 id="about-title" class="text-4xl font-bold text-gray-800 mb-4">
-              ကျွန်ုပ်တို့အကြောင်း
-            </h2>
-            <p id="about-text" class="text-lg text-gray-600 max-w-2xl mx-auto">
-              ၁၀ နှစ်ကျော် အတွေ့အကြုံရှိသော တရားဆရာများနှင့်အတူ သင့်စိတ်ဓာတ်ကို
-              ခိုင်မာစေပြီး စိတ်အေးချမ်းမှုကို ရရှိစေပါ။
-            </p>
-          </div>
-          <!-- Benefits Grid -->
-          <div class="mb-16">
-            <h3
-              id="benefits-title"
-              class="text-3xl font-bold text-center text-gray-800 mb-10"
-            >
-              အကျိုးကျေးဇူးများ
-            </h3>
-            <div class="grid md:grid-cols-3 gap-8">
-              <div
-                class="bg-purple-50 p-8 rounded-2xl card-hover fade-in stagger-2"
-              >
-                <div class="text-5xl mb-4">🧠</div>
-                <h4 class="text-xl font-semibold text-gray-800 mb-3">
-                  စိတ်ပိုင်း ကျန်းမာရေ���
-                </h4>
-                <p class="text-gray-600">
-                  စိတ်ဖိစီးမှု လျော့ကျ���ေပြီး စိတ်ပ��ု��်းဆိုင်ရာ တည်ငြိမ်မှု
-                  တိုးတက်စေသည်
-                </p>
-              </div>
-              <div
-                class="bg-indigo-50 p-8 rounded-2xl card-hover fade-in stagger-3"
-              >
-                <div class="text-5xl mb-4">💪</div>
-                <h4 class="text-xl font-semibold text-gray-800 mb-3">
-                  ခန္ဓာကိုယ် ကျန်းမာရေး
-                </h4>
-                <p class="text-gray-600">
-                  သွေးပေါင်ချိန် ထိန်းညှိပေးပြီး ကိုယ်ခံအား မြင့်မားစေသည်
-                </p>
-              </div>
-              <div
-                class="bg-purple-50 p-8 rounded-2xl card-hover fade-in stagger-4"
-              >
-                <div class="text-5xl mb-4">✨</div>
-                <h4 class="text-xl font-semibold text-gray-800 mb-3">
-                  စိတ်တည်ငြိမ်မှု
-                </h4>
-                <p class="text-gray-600">
-                  အာရုံ���ူးစိုက်မှု ပ��ု����ုကောင်းမွန်လာပြီး စိတ်အေးချမ်းမှု
-                  ရရှိသည်
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Schedule Section -->
+        <div class="absolute inset-0 opacity-10">
+          <div class="absolute top-10 left-10 text-9xl lotus-pulse">🪷</div>
           <div
-            class="bg-gradient-to-br from-purple-100 to-indigo-100 rounded-3xl p-10"
+            class="absolute bottom-10 right-10 text-9xl lotus-pulse"
+            style="animation-delay: 1.5s"
           >
-            <h3
-              id="schedule-title"
-              class="text-3xl font-bold text-center text-gray-800 mb-8"
-            >
-              သင်တန်းအချိန်စာရ��်း
-            </h3>
-            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              <div class="bg-white p-6 rounded-xl shadow-md">
-                <div class="flex items-center mb-3">
-                  <span class="text-3xl mr-3">🌅</span>
-                  <div>
-                    <h4 class="font-semibold text-lg text-gray-800">
-                      နံနက်သင်တန်း
-                    </h4>
-                    <p class="text-gray-600">နံနက် ၆:၀၀ - ၇:၃၀</p>
-                  </div>
-                </div>
-                <p class="text-gray-600 text-sm">တနင်္လာ၊ ဗုဒ္ဓဟူး၊ သောကြာ</p>
-              </div>
-              <div class="bg-white p-6 rounded-xl shadow-md">
-                <div class="flex items-center mb-3">
-                  <span class="text-3xl mr-3">🌆</span>
-                  <div>
-                    <h4 class="font-semibold text-lg text-gray-800">
-                      ညနေသ���်တန်း
-                    </h4>
-                    <p class="text-gray-600">ညနေ ၆:၀၀ - ၇:၃၀</p>
-                  </div>
-                </div>
-                <p class="text-gray-600 text-sm">အင်္ဂါ၊ ကြာသပတေး၊ စနေ</p>
-              </div>
-              <div class="bg-white p-6 rounded-xl shadow-md">
-                <div class="flex items-center mb-3">
-                  <span class="text-3xl mr-3">🌙</span>
-                  <div>
-                    <h4 class="font-semibold text-lg text-gray-800">
-                      ညသင်တန်း
-                    </h4>
-                    <p class="text-gray-600">ည ၈:၀၀ - ၉:၀၀</p>
-                  </div>
-                </div>
-                <p class="text-gray-600 text-sm">သောကြာနေ့</p>
-              </div>
-              <div class="bg-white p-6 rounded-xl shadow-md">
-                <div class="flex items-center mb-3">
-                  <span class="text-3xl mr-3">☀️</span>
-                  <div>
-                    <h4 class="font-semibold text-lg text-gray-800">
-                      စနေ/တနင်္ဂနွေ အထူးသင်တန်း
-                    </h4>
-                    <p class="text-gray-600">နံနက် ၉:၀၀ - ၁၁:၀၀</p>
-                  </div>
-                </div>
-                <p class="text-gray-600 text-sm">အစပြုသူများအတွက်</p>
-              </div>
-            </div>
+            🪷
+          </div>
+          <div
+            class="absolute top-1/2 left-1/4 text-7xl lotus-pulse"
+            style="animation-delay: 0.7s"
+          >
+            ☸️
+          </div>
+          <div
+            class="absolute top-1/3 right-1/4 text-7xl lotus-pulse"
+            style="animation-delay: 2s"
+          >
+            ☸️
           </div>
         </div>
-      </section>
-      <!-- CTA Section -->
-      <section
-        class="py-16 px-6 text-center text-white"
-        style="background: linear-gradient(135deg, #edb007 0%, #e51d70 100%)"
-      >
-        <div class="max-w-3xl mx-auto">
-          <h3 class="text-4xl font-bold mb-4">
-            သင့်ခရီးစဉ်ကို ယနေ့ပဲ စတင်လိုက်ပါ
-          </h3>
-          <p class="text-xl mb-8 opacity-90">
-            ပထမအကြိမ် အခမဲ့ သင်တန်းတက်နိုင်ပါသည်
+        <div class="max-w-5xl mx-auto fade-in relative z-10">
+          <img
+            src="https://raw.githubusercontent.com/wuweiclomx/Pynnyanada2026/refs/heads/main/LOGO%20PY.png"
+            alt="Logo"
+            class="h-32 md:h-40 mx-auto mb-6 lotus-pulse"
+            loading="lazy"
+            onerror="this.style.display='none';"
+          />
+          <h1
+            class="text-5xl md:text-7xl font-bold mb-6"
+            style="
+              font-family: 'Cormorant Garamond', serif;
+              text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            "
+          >
+            Venerable PYINNYANANDA
+          </h1>
+          <p class="text-2xl md:text-3xl mb-4 font-light italic">
+            Loving-Kindness Meditation
           </p>
-          <button
-            class="px-10 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+          <p
+            class="text-xl md:text-2xl mb-8 opacity-95 max-w-3xl mx-auto leading-relaxed"
+          >
+            Join me in exploring the path of compassion through meditation
+            classes and sharing experiences from Myanmar
+          </p>
+          <div class="flex items-center justify-center gap-4 mb-10 text-5xl">
+            <span class="lotus-pulse">💜</span>
+            <span class="lotus-pulse" style="animation-delay: 0.5s">🙏</span>
+            <span class="lotus-pulse" style="animation-delay: 1s">☸️</span>
+          </div>
+          <p
+            class="text-lg md:text-xl mb-10 font-medium"
+            style="color: #edb007"
+          >
+            Guided by Venerable PYINNYANANDA
+          </p>
+          <a
+            href="#contact"
+            class="inline-block px-10 md:px-12 py-5 md:py-6 rounded-full text-lg md:text-xl font-bold shadow-2xl hover:scale-105 transition-transform duration-300"
             style="background-color: #28b133; color: white"
           >
-            📞 ဆက်သွယ်ရန် - ၀၉-၁၂၃-၄၅၆-၇၈၉
-          </button>
+            🪷 Join Meditation Classes
+          </a>
+        </div>
+      </section>
+      <!-- Welcome Section -->
+      <section
+        id="welcome"
+        class="py-20 px-6"
+        style="background: linear-gradient(135deg, #28b133 0%, #57329d 100%)"
+      >
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16 fade-in">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6 text-white">
+              A Warm Welcome
+            </h2>
+            <p
+              class="text-xl md:text-2xl text-white opacity-90 max-w-3xl mx-auto leading-relaxed"
+            >
+              It brings me great joy to welcome you to this journey of Metta
+              Bhavana meditation
+            </p>
+          </div>
+          <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12 fade-in">
+            <div class="grid md:grid-cols-2 gap-10 md:gap-12 items-center">
+              <div>
+                <div
+                  class="w-48 h-48 md:w-56 md:h-56 mx-auto mb-6 rounded-full overflow-hidden lotus-pulse"
+                  style="box-shadow: 0 10px 40px rgba(87, 50, 157, 0.3)"
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/wuweiclomx/Pynnyanada2026/refs/heads/main/2026.1.png"
+                    alt="Venerable PYINNYANANDA"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                    onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-8xl\' style=\'background: linear-gradient(135deg, #57329d, #e51d70);\'>🙏</div>';"
+                  />
+                </div>
+                <h3
+                  class="text-3xl md:text-4xl font-bold text-center mb-3"
+                  style="color: #57329d"
+                >
+                  Venerable PYINNYANANDA
+                </h3>
+                <p
+                  class="text-center font-semibold text-lg mb-4"
+                  style="color: #e51d70"
+                >
+                  Ph.D. Candidate in Buddhist Studies
+                </p>
+                <p class="text-center text-gray-600 italic">
+                  Buddhist University, Myanmar
+                </p>
+              </div>
+              <div class="space-y-6 text-gray-700">
+                <div
+                  class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl shadow-md"
+                >
+                  <div class="flex items-start gap-4">
+                    <span class="text-4xl">💜</span>
+                    <div>
+                      <h4 class="font-bold text-xl mb-2" style="color: #57329d">
+                        Welcome Message
+                      </h4>
+                      <p class="leading-relaxed">
+                        For over 20 years, I have dedicated my life to Buddhist
+                        practice and teachings. I invite you to join our
+                        meditation classes where we explore the path of
+                        compassion together.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl shadow-md"
+                >
+                  <div class="flex items-start gap-4">
+                    <span class="text-4xl">🪷</span>
+                    <div>
+                      <h4 class="font-bold text-xl mb-2" style="color: #57329d">
+                        What I Share
+                      </h4>
+                      <p class="leading-relaxed">
+                        Through meditation classes, I share my experiences from
+                        Buddhist University in Myanmar and guide you in
+                        cultivating loving-kindness inspired by Tara and
+                        Avalokitesvara.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl shadow-md"
+                >
+                  <div class="flex items-start gap-4">
+                    <span class="text-4xl">☸️</span>
+                    <div>
+                      <h4 class="font-bold text-xl mb-2" style="color: #57329d">
+                        My Journey
+                      </h4>
+                      <p class="leading-relaxed">
+                        Born in Myanmar, ordained at age 20, with 15 years at
+                        Pegu Pali University and advanced Buddhist studies
+                        across Asia.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Experience Section -->
+      <section
+        id="experience"
+        class="py-20 px-6"
+        style="background-color: #ffffff"
+      >
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2
+              class="text-5xl md:text-6xl font-bold mb-6"
+              style="color: #57329d"
+            >
+              My Experience &amp; Journey
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+              Sharing wisdom from Buddhist University, Myanmar
+            </p>
+          </div>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div
+              class="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-3xl shadow-lg card-hover"
+            >
+              <div class="text-6xl mb-4 text-center">🎓</div>
+              <h3
+                class="text-2xl font-bold mb-6 text-center"
+                style="color: #57329d"
+              >
+                Academic Background
+              </h3>
+              <ul class="space-y-4 text-gray-700">
+                <li class="flex items-start gap-3">
+                  <span class="text-2xl">📚</span>
+                  <span>15 years at Pegu Pali University, Myanmar</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-2xl">🎓</span>
+                  <span
+                    ><strong>BA in Buddhism</strong> -
+                    Mahachulalongkornrajavidyalaya University, Thailand
+                    (2018)</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-2xl">🎓</span>
+                  <span
+                    ><strong>MA in Buddhism</strong> - University of Kelaniya,
+                    Sri Lanka (2022)</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-2xl">🎓</span>
+                  <span
+                    ><strong>Ph.D. Candidate</strong> - Lumbini Buddhist
+                    University, Nepal (Current)</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <div
+              class="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-3xl shadow-lg card-hover"
+            >
+              <div class="text-6xl mb-4 text-center">👨‍🏫</div>
+              <h3
+                class="text-2xl font-bold mb-6 text-center"
+                style="color: #28b133"
+              >
+                Teaching &amp; Practice
+              </h3>
+              <ul class="space-y-4 text-gray-700">
+                <li class="flex items-start gap-3">
+                  <span class="text-2xl">🏛️</span>
+                  <span>Professor at Kyunhla Buddhist University</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-2xl">🧘</span>
+                  <span>Metta Bhavana meditation instructor since 2022</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-2xl">���</span>
+                  <span>Specialist in Pali and Buddhist studies</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-2xl">🙏</span>
+                  <span>Over 20 years of continuous practice</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Metta Practice Section -->
+      <section
+        id="metta"
+        class="py-20 px-6"
+        style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)"
+      >
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2
+              class="text-5xl md:text-6xl font-bold mb-6"
+              style="color: #57329d"
+            >
+              Meditation Classes
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
+              Learn Metta Bhavana - the practice of cultivating loving-kindness
+              and compassion
+            </p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8 mb-16">
+            <div
+              class="bg-white p-8 rounded-3xl card-hover shadow-lg border-2"
+              style="border-color: #57329d"
+            >
+              <div class="text-6xl mb-4 text-center">💝</div>
+              <h3
+                class="text-2xl font-bold mb-4 text-center"
+                style="color: #57329d"
+              >
+                Loving-Kindness
+              </h3>
+              <p class="text-gray-600 text-center leading-relaxed">
+                Develop boundless love and kindness for yourself and all beings
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-3xl card-hover shadow-lg border-2"
+              style="border-color: #28b133"
+            >
+              <div class="text-6xl mb-4 text-center">🕊️</div>
+              <h3
+                class="text-2xl font-bold mb-4 text-center"
+                style="color: #28b133"
+              >
+                Compassion
+              </h3>
+              <p class="text-gray-600 text-center leading-relaxed">
+                Cultivate deep empathy and wish for all beings to be free from
+                suffering
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-3xl card-hover shadow-lg border-2"
+              style="border-color: #e51d70"
+            >
+              <div class="text-6xl mb-4 text-center">✨</div>
+              <h3
+                class="text-2xl font-bold mb-4 text-center"
+                style="color: #e51d70"
+              >
+                Inner Peace
+              </h3>
+              <p class="text-gray-600 text-center leading-relaxed">
+                Experience profound tranquility and emotional healing through
+                practice
+              </p>
+            </div>
+          </div>
+          <div
+            class="rounded-3xl p-8 md:p-10"
+            style="
+              background: linear-gradient(135deg, #57329d 0%, #e51d70 100%);
+            "
+          >
+            <h3
+              class="text-3xl md:text-4xl font-bold text-center text-white mb-8"
+            >
+              The Four Immeasurables
+            </h3>
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <div
+                class="bg-white bg-opacity-20 backdrop-blur-sm p-6 rounded-2xl"
+              >
+                <div class="flex items-center gap-4 mb-3">
+                  <span class="text-5xl">💜</span>
+                  <h4 class="text-2xl font-bold text-white">Metta (Love)</h4>
+                </div>
+                <p class="text-lg text-white opacity-95">
+                  May all beings be happy and peaceful
+                </p>
+              </div>
+              <div
+                class="bg-white bg-opacity-20 backdrop-blur-sm p-6 rounded-2xl"
+              >
+                <div class="flex items-center gap-4 mb-3">
+                  <span class="text-5xl">🤲</span>
+                  <h4 class="text-2xl font-bold text-white">
+                    Karuna (Compassion)
+                  </h4>
+                </div>
+                <p class="text-lg text-white opacity-95">
+                  May all beings be free from suffering
+                </p>
+              </div>
+              <div
+                class="bg-white bg-opacity-20 backdrop-blur-sm p-6 rounded-2xl"
+              >
+                <div class="flex items-center gap-4 mb-3">
+                  <span class="text-5xl">😊</span>
+                  <h4 class="text-2xl font-bold text-white">Mudita (Joy)</h4>
+                </div>
+                <p class="text-lg text-white opacity-95">
+                  May all beings rejoice in their happiness
+                </p>
+              </div>
+              <div
+                class="bg-white bg-opacity-20 backdrop-blur-sm p-6 rounded-2xl"
+              >
+                <div class="flex items-center gap-4 mb-3">
+                  <span class="text-5xl">⚖️</span>
+                  <h4 class="text-2xl font-bold text-white">
+                    Upekkha (Equanimity)
+                  </h4>
+                </div>
+                <p class="text-lg text-white opacity-95">
+                  May all beings rest in peace and balance
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Divine Inspiration Section -->
+      <section
+        id="deities"
+        class="py-20 px-6"
+        style="background-color: #ffffff"
+      >
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2
+              class="text-5xl md:text-6xl font-bold mb-6"
+              style="color: #059669"
+            >
+              Divine Inspiration
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+              Drawing wisdom from the great Bodhisattvas of compassion
+            </p>
+          </div>
+          <div class="grid md:grid-cols-2 gap-10 mb-12">
+            <!-- Green Tara -->
+            <div
+              class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-3xl p-8 md:p-10 card-hover shadow-xl"
+            >
+              <div class="text-center mb-6">
+                <div class="text-8xl mb-4">🟢</div>
+                <h3
+                  class="text-3xl md:text-4xl font-bold mb-3"
+                  style="color: #059669"
+                >
+                  Green Tara
+                </h3>
+                <p class="text-lg font-semibold" style="color: #10b981">
+                  Mother of Liberation
+                </p>
+              </div>
+              <div class="space-y-4 text-gray-700">
+                <p class="leading-relaxed text-center italic">
+                  "Swift protectress, born from the tears of Avalokitesvara"
+                </p>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                  <h4 class="font-bold text-lg mb-3 flex items-center gap-2">
+                    <span>🌟</span> Sacred Qualities
+                  </h4>
+                  <ul class="space-y-2">
+                    <li>• Active compassion and swift assistance</li>
+                    <li>• Protection from fears and obstacles</li>
+                    <li>• Feminine wisdom and nurturing energy</li>
+                    <li>• Liberation through loving action</li>
+                  </ul>
+                </div>
+                <p
+                  class="text-center font-semibold pt-4"
+                  style="color: #059669"
+                >
+                  "Om Tare Tuttare Ture Soha"
+                </p>
+              </div>
+            </div>
+            <!-- Avalokitesvara -->
+            <div
+              class="bg-gradient-to-br from-blue-50 to-cyan-100 rounded-3xl p-8 md:p-10 card-hover shadow-xl"
+            >
+              <div class="text-center mb-6">
+                <div class="text-8xl mb-4">🔵</div>
+                <h3
+                  class="text-3xl md:text-4xl font-bold mb-3"
+                  style="color: #0891b2"
+                >
+                  Avalokitesvara
+                </h3>
+                <p class="text-lg font-semibold" style="color: #06b6d4">
+                  The One Who Hears the Cries
+                </p>
+              </div>
+              <div class="space-y-4 text-gray-700">
+                <p class="leading-relaxed text-center italic">
+                  "Bodhisattva of infinite compassion and mercy"
+                </p>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                  <h4 class="font-bold text-lg mb-3 flex items-center gap-2">
+                    <span>🙏</span> Sacred Qualities
+                  </h4>
+                  <ul class="space-y-2">
+                    <li>• Boundless compassion for all beings</li>
+                    <li>• Listening deeply to suffering</li>
+                    <li>• Thousand arms of skillful means</li>
+                    <li>• Universal love without discrimination</li>
+                  </ul>
+                </div>
+                <p
+                  class="text-center font-semibold pt-4"
+                  style="color: #0891b2"
+                >
+                  "Om Mani Padme Hum"
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-gradient-to-r from-green-100 via-emerald-100 to-cyan-100 rounded-3xl p-8 md:p-10 text-center"
+          >
+            <h3
+              class="text-3xl md:text-4xl font-bold mb-6"
+              style="color: #059669"
+            >
+              Practice Inspired by Divine Compassion
+            </h3>
+            <p
+              class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-6"
+            >
+              Our Metta Bhavana practice draws from the infinite compassion of
+              Green Tara's swift action and Avalokitesvara's boundless love,
+              guiding you to embody these divine qualities in your daily life.
+            </p>
+            <div class="flex justify-center gap-6 text-6xl">
+              <span class="lotus-pulse">🪷</span>
+              <span class="lotus-pulse" style="animation-delay: 0.5s">☸️</span>
+              <span class="lotus-pulse" style="animation-delay: 1s">🪷</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section
+        id="contact"
+        class="py-20 px-6 text-white"
+        style="background: linear-gradient(135deg, #57329d 0%, #e51d70 100%)"
+      >
+        <div class="max-w-5xl mx-auto">
+          <div class="text-center mb-12">
+            <div class="text-6xl mb-4">���</div>
+            <h3 class="text-4xl md:text-5xl font-bold mb-4">
+              Join Our Meditation Classes
+            </h3>
+            <p class="text-xl md:text-2xl opacity-95">
+              Connect with us to begin your journey of compassion
+            </p>
+          </div>
+          <div class="bg-white rounded-3xl shadow-2xl p-6 md:p-12">
+            <form id="contact-form" class="space-y-6">
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-gray-700 font-semibold mb-2"
+                    >Full Name *</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition-colors"
+                    style="border-color: #d1d5db"
+                    placeholder="Your full name"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-gray-700 font-semibold mb-2"
+                    >Email *</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition-colors"
+                    style="border-color: #d1d5db"
+                    placeholder="your@email.com"
+                  />
+                </div>
+              </div>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="phone"
+                    class="block text-gray-700 font-semibold mb-2"
+                    >Phone *</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    class="w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition-colors"
+                    style="border-color: #d1d5db"
+                    placeholder="+52 123 456 7890"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="interest"
+                    class="block text-gray-700 font-semibold mb-2"
+                    >I'm interested in *</label
+                  >
+                  <select
+                    id="interest"
+                    name="interest"
+                    required
+                    class="w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition-colors"
+                    style="border-color: #d1d5db"
+                  >
+                    <option value="">Select an option</option>
+                    <option value="group-classes">
+                      Group Meditation Classes
+                    </option>
+                    <option value="private-sessions">Private Sessions</option>
+                    <option value="online-classes">Online Classes</option>
+                    <option value="information">General Information</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block text-gray-700 font-semibold mb-2"
+                  >Your Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition-colors resize-none"
+                  style="border-color: #d1d5db"
+                  placeholder="Share your intentions and questions about Metta Bhavana practice..."
+                ></textarea>
+              </div>
+              <div
+                id="form-message"
+                class="hidden p-4 rounded-lg text-center font-semibold"
+              ></div>
+              <div class="text-center">
+                <button
+                  type="submit"
+                  id="submit-btn"
+                  class="px-10 md:px-12 py-4 rounded-full text-lg md:text-xl font-bold text-white shadow-2xl hover:scale-105 transition-all duration-300"
+                  style="background: linear-gradient(135deg, #28b133, #57329d)"
+                >
+                  💜 Send Your Message
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="mt-12 grid md:grid-cols-3 gap-6 text-center">
+            <div
+              class="p-6 rounded-xl backdrop-blur-sm"
+              style="background-color: rgba(255, 255, 255, 0.2)"
+            >
+              <div class="text-4xl mb-3">📧</div>
+              <h4 class="font-bold text-lg mb-2">Email</h4>
+              <p class="text-sm">metta@pyinnyananda.org</p>
+            </div>
+            <div
+              class="p-6 rounded-xl backdrop-blur-sm"
+              style="background-color: rgba(255, 255, 255, 0.2)"
+            >
+              <div class="text-4xl mb-3">📱</div>
+              <h4 class="font-bold text-lg mb-2">WhatsApp</h4>
+              <p class="text-sm">+52 123 456 7890</p>
+            </div>
+            <div
+              class="p-6 rounded-xl backdrop-blur-sm"
+              style="background-color: rgba(255, 255, 255, 0.2)"
+            >
+              <div class="text-4xl mb-3">📍</div>
+              <h4 class="font-bold text-lg mb-2">Location</h4>
+              <p class="text-sm">Mexico City, México</p>
+            </div>
+          </div>
         </div>
       </section>
       <!-- Footer -->
-      <footer class="bg-gray-900 text-gray-300 py-8 px-6 text-center">
-        <p id="footer-text" class="mb-4">
-          © ၂၀၂၄ တရားထိုင်သင်တန်း။ မ��ပိုင်ခွင့်များ လက်ဝယ်၌ရှိသည်။
-        </p>
-        <div class="flex justify-center space-x-6 text-2xl">
-          <span>📧</span> <span>📱</span> <span>🌐</span>
+      <footer
+        class="py-10 px-6 text-center"
+        style="background-color: #1a1a1a; color: #d1d5db"
+      >
+        <div class="max-w-4xl mx-auto">
+          <div class="text-5xl mb-4 lotus-pulse">🪷</div>
+          <p class="mb-4 text-xl font-semibold">
+            Metta Bhavana - Loving-Kindness Meditation
+          </p>
+          <p class="mb-6 text-lg">Venerable PYINNYANANDA</p>
+          <p class="text-sm opacity-75 mb-6">
+            Buddhist University, Myanmar | Mexico City
+          </p>
+          <div class="flex justify-center space-x-6 text-3xl mb-6">
+            <span>💜</span> <span>🪷</span> <span>☸️</span> <span>🙏</span>
+          </div>
+          <p class="text-sm italic opacity-90 mb-4">
+            "May all beings be happy, peaceful, and free from suffering"
+          </p>
+          <p class="text-xs opacity-60">© 2024 All rights reserved</p>
         </div>
       </footer>
     </div>
     <script>
-      const defaultConfig = {
-        background_color: "#667eea",
-        secondary_surface_color: "#ffffff",
-        text_color: "#1f2937",
-        primary_action_color: "#7c3aed",
-        secondary_action_color: "#6366f1",
-        font_family: "Noto Sans Myanmar",
-        font_size: 16,
-        main_title: "စိတ်အေးချမ်းမှု ရှာဖွေပါ",
-        subtitle: "တရားထိုင်ခြင်းဖြင့် သင့်ဘဝကို ပြောင်းလဲလိုက်ပါ",
-        cta_button: "ယခုပဲ စတင်လိုက်ပါ",
-        about_title: "ကျွန်ုပ်တို့အကြောင်���",
-        about_text:
-          "၁၀ ��ှစ်ကျော် အတွေ့အကြုံရှိသော တရားဆရာများနှင့်အတူ သင့်စိတ်ဓာတ်ကို ခိုင်မာစေပြီး စိတ်အေးချမ်းမှုကို ရရှိစေပါ။",
-        benefits_title: "အကျိုးကျေးဇူးများ",
-        schedule_title: "သင်တန်းအချိန်စာရင်း",
-        footer_text: "© ၂၀၂၄ တရားထိုင်သင်တန်း။ မူပိုင်ခွင့်များ လက်ဝယ်၌ရှိသည်။",
-      };
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-      async function onConfigChange(config) {
-        const customFont = config.font_family || defaultConfig.font_family;
-        const baseFontStack = "system-ui, -apple-system, sans-serif";
-        const baseSize = config.font_size || defaultConfig.font_size;
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
 
-        const backgroundColor =
-          config.background_color || defaultConfig.background_color;
-        const secondarySurfaceColor =
-          config.secondary_surface_color ||
-          defaultConfig.secondary_surface_color;
-        const textColor = config.text_color || defaultConfig.text_color;
-        const primaryActionColor =
-          config.primary_action_color || defaultConfig.primary_action_color;
-        const secondaryActionColor =
-          config.secondary_action_color || defaultConfig.secondary_action_color;
-
-        // Apply colors
-        const heroSection = document.querySelector(".gradient-bg");
-        heroSection.style.background = `linear-gradient(135deg, ${backgroundColor} 0%, ${secondaryActionColor} 100%)`;
-
-        document.body.style.backgroundColor = secondarySurfaceColor;
-
-        const cards = document.querySelectorAll(
-          ".bg-purple-50, .bg-indigo-50, .bg-green-100, .bg-yellow-100, .bg-pink-100"
-        );
-        cards.forEach((card) => {
-          card.style.backgroundColor = secondarySurfaceColor;
-          card.style.border = `2px solid ${backgroundColor}20`;
+      // Close mobile menu when clicking a link
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
         });
+      });
 
-        const allText = document.querySelectorAll(
-          "h1, h2, h3, h4, p:not(.text-white)"
-        );
-        allText.forEach((el) => {
-          el.style.color = textColor;
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            const offsetTop = target.offsetTop - 70;
+            window.scrollTo({
+              top: offsetTop,
+              behavior: "smooth",
+            });
+          }
         });
+      });
 
-        const primaryButtons = document.querySelectorAll("#cta-button");
-        primaryButtons.forEach((btn) => {
-          btn.style.backgroundColor = secondarySurfaceColor;
-          btn.style.color = primaryActionColor;
-        });
+      // Contact form handling
+      const contactForm = document.getElementById("contact-form");
+      const formMessage = document.getElementById("form-message");
+      const submitBtn = document.getElementById("submit-btn");
 
-        const secondaryButtons = document.querySelectorAll(
-          "section.bg-gradient-to-r button"
-        );
-        secondaryButtons.forEach((btn) => {
-          btn.style.backgroundColor = secondarySurfaceColor;
-          btn.style.color = secondaryActionColor;
-        });
+      contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-        // Apply fonts
-        document.body.style.fontFamily = `${customFont}, ${baseFontStack}`;
+        // Disable button during submission
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = "💚 Sending...";
+        submitBtn.style.opacity = "0.7";
 
-        // Apply font sizes
-        document.getElementById("main-title").style.fontSize = `${
-          baseSize * 2
-        }px`;
-        document.getElementById("subtitle").style.fontSize = `${
-          baseSize * 1.25
-        }px`;
-        document.getElementById("cta-button").style.fontSize = `${
-          baseSize * 1.125
-        }px`;
-
-        const h2Elements = document.querySelectorAll("h2");
-        h2Elements.forEach(
-          (el) => (el.style.fontSize = `${baseSize * 1.75}px`)
-        );
-
-        const h3Elements = document.querySelectorAll("h3");
-        h3Elements.forEach((el) => (el.style.fontSize = `${baseSize * 1.5}px`));
-
-        const h4Elements = document.querySelectorAll("h4");
-        h4Elements.forEach(
-          (el) => (el.style.fontSize = `${baseSize * 1.25}px`)
-        );
-
-        const paragraphs = document.querySelectorAll("p");
-        paragraphs.forEach((el) => (el.style.fontSize = `${baseSize}px`));
-
-        // Apply text content
-        document.getElementById("main-title").textContent =
-          config.main_title || defaultConfig.main_title;
-        document.getElementById("subtitle").textContent =
-          config.subtitle || defaultConfig.subtitle;
-        document.getElementById("cta-button").textContent =
-          config.cta_button || defaultConfig.cta_button;
-        document.getElementById("about-title").textContent =
-          config.about_title || defaultConfig.about_title;
-        document.getElementById("about-text").textContent =
-          config.about_text || defaultConfig.about_text;
-        document.getElementById("teacher-title").textContent =
-          config.teacher_title || defaultConfig.teacher_title;
-        document.getElementById("teacher-name").textContent =
-          config.teacher_name || defaultConfig.teacher_name;
-        document.getElementById("teacher-intro").textContent =
-          config.teacher_intro || defaultConfig.teacher_intro;
-        document.getElementById("benefits-title").textContent =
-          config.benefits_title || defaultConfig.benefits_title;
-        document.getElementById("schedule-title").textContent =
-          config.schedule_title || defaultConfig.schedule_title;
-        document.getElementById("footer-text").textContent =
-          config.footer_text || defaultConfig.footer_text;
-      }
-
-      function mapToCapabilities(config) {
-        return {
-          recolorables: [
-            {
-              get: () =>
-                config.background_color || defaultConfig.background_color,
-              set: (value) => {
-                config.background_color = value;
-                window.elementSdk.setConfig({ background_color: value });
-              },
-            },
-            {
-              get: () =>
-                config.secondary_surface_color ||
-                defaultConfig.secondary_surface_color,
-              set: (value) => {
-                config.secondary_surface_color = value;
-                window.elementSdk.setConfig({ secondary_surface_color: value });
-              },
-            },
-            {
-              get: () => config.text_color || defaultConfig.text_color,
-              set: (value) => {
-                config.text_color = value;
-                window.elementSdk.setConfig({ text_color: value });
-              },
-            },
-            {
-              get: () =>
-                config.primary_action_color ||
-                defaultConfig.primary_action_color,
-              set: (value) => {
-                config.primary_action_color = value;
-                window.elementSdk.setConfig({ primary_action_color: value });
-              },
-            },
-            {
-              get: () =>
-                config.secondary_action_color ||
-                defaultConfig.secondary_action_color,
-              set: (value) => {
-                config.secondary_action_color = value;
-                window.elementSdk.setConfig({ secondary_action_color: value });
-              },
-            },
-          ],
-          borderables: [],
-          fontEditable: {
-            get: () => config.font_family || defaultConfig.font_family,
-            set: (value) => {
-              config.font_family = value;
-              window.elementSdk.setConfig({ font_family: value });
-            },
-          },
-          fontSizeable: {
-            get: () => config.font_size || defaultConfig.font_size,
-            set: (value) => {
-              config.font_size = value;
-              window.elementSdk.setConfig({ font_size: value });
-            },
-          },
+        // Get form data
+        const formData = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          phone: document.getElementById("phone").value,
+          interest: document.getElementById("interest").value,
+          message: document.getElementById("message").value,
         };
-      }
 
-      function mapToEditPanelValues(config) {
-        return new Map([
-          ["main_title", config.main_title || defaultConfig.main_title],
-          ["subtitle", config.subtitle || defaultConfig.subtitle],
-          ["cta_button", config.cta_button || defaultConfig.cta_button],
-          ["about_title", config.about_title || defaultConfig.about_title],
-          ["about_text", config.about_text || defaultConfig.about_text],
-          [
-            "teacher_title",
-            config.teacher_title || defaultConfig.teacher_title,
-          ],
-          ["teacher_name", config.teacher_name || defaultConfig.teacher_name],
-          [
-            "teacher_intro",
-            config.teacher_intro || defaultConfig.teacher_intro,
-          ],
-          [
-            "benefits_title",
-            config.benefits_title || defaultConfig.benefits_title,
-          ],
-          [
-            "schedule_title",
-            config.schedule_title || defaultConfig.schedule_title,
-          ],
-          ["footer_text", config.footer_text || defaultConfig.footer_text],
-        ]);
-      }
+        // Simulate form submission
+        setTimeout(() => {
+          // Show success message
+          formMessage.classList.remove("hidden");
+          formMessage.style.backgroundColor = "#f3e8ff";
+          formMessage.style.color = "#57329d";
+          formMessage.innerHTML =
+            "🪷 Thank you! Your message has been received with loving-kindness. We will contact you soon. May you be happy and peaceful. 🙏";
+
+          // Reset form
+          contactForm.reset();
+
+          // Re-enable button
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = "💜 Send Your Message";
+          submitBtn.style.opacity = "1";
+
+          // Hide message after 6 seconds
+          setTimeout(() => {
+            formMessage.classList.add("hidden");
+          }, 6000);
+        }, 1500);
+      });
 
       if (window.elementSdk) {
         window.elementSdk.init({
-          defaultConfig,
-          onConfigChange,
-          mapToCapabilities,
-          mapToEditPanelValues,
+          defaultConfig: {},
+          onConfigChange: async (config) => {},
+          mapToCapabilities: (config) => ({
+            recolorables: [],
+            borderables: [],
+            fontEditable: undefined,
+            fontSizeable: undefined,
+          }),
+          mapToEditPanelValues: (config) => new Map(),
         });
       }
     </script>
@@ -486,7 +993,7 @@
           if (b) {
             var d = b.createElement("script");
             d.innerHTML =
-              "window.__CF$cv$params={r:'9bea7fec07eaac50',t:'MTc2ODUzMzg2NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+              "window.__CF$cv$params={r:'9beac46672aaac50',t:'MTc2ODUzNjY2OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
             b.getElementsByTagName("head")[0].appendChild(d);
           }
         }
