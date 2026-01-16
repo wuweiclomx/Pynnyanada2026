@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Metta Bhavana - Loving-Kindness Meditation | Venerable PYINNYANANDA -
-      México 2026
+      February 2026 Mexico City
     </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/_sdk/element_sdk.js"></script>
@@ -72,6 +72,41 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+      }
+
+      .chat-bubble-user {
+        background: linear-gradient(135deg, #57329d, #e51d70);
+        color: white;
+        border-radius: 18px 18px 4px 18px;
+      }
+
+      .chat-bubble-bot {
+        background: #f3f4f6;
+        color: #1f2937;
+        border-radius: 18px 18px 18px 4px;
+      }
+
+      .chat-input:focus {
+        outline: none;
+        border-color: #57329d;
+      }
+
+      #chat-widget {
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+
+      .chat-messages::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .chat-messages::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+      }
+
+      .chat-messages::-webkit-scrollbar-thumb {
+        background: #57329d;
+        border-radius: 10px;
       }
     </style>
     <style>
@@ -211,15 +246,11 @@
           <div
             class="absolute top-1/2 left-1/4 text-7xl lotus-pulse"
             style="animation-delay: 0.7s"
-          >
-            ☸️
-          </div>
+          ></div>
           <div
             class="absolute top-1/3 right-1/4 text-7xl lotus-pulse"
             style="animation-delay: 2s"
-          >
-            ☸️
-          </div>
+          ></div>
         </div>
         <div class="max-w-5xl mx-auto fade-in relative z-10">
           <img
@@ -263,7 +294,7 @@
             class="inline-block px-10 md:px-12 py-5 md:py-6 rounded-full text-lg md:text-xl font-bold shadow-2xl hover:scale-105 transition-transform duration-300"
             style="background-color: #28b133; color: white"
           >
-            🪷 Join Meditation Classes
+            Join Meditation Classes
           </a>
         </div>
       </section>
@@ -453,7 +484,7 @@
                   <span>Metta Bhavana meditation instructor since 2022</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <span class="text-2xl">���</span>
+                  <span class="text-2xl">🧘</span>
                   <span>Specialist in Pali and Buddhist studies</span>
                 </li>
                 <li class="flex items-start gap-3">
@@ -727,7 +758,7 @@
       >
         <div class="max-w-5xl mx-auto">
           <div class="text-center mb-12">
-            <div class="text-6xl mb-4">���</div>
+            <div class="text-6xl mb-4"></div>
             <h3 class="text-4xl md:text-5xl font-bold mb-4">
               Join Our Meditation Classes
             </h3>
@@ -849,15 +880,16 @@
             >
               <div class="text-4xl mb-3">📧</div>
               <h4 class="font-bold text-lg mb-2">Email</h4>
-              <p class="text-sm">metta@pyinnyananda.org</p>
+              <p class="text-sm break-all">Pyinnyananda12@gmail.com</p>
             </div>
             <div
               class="p-6 rounded-xl backdrop-blur-sm"
               style="background-color: rgba(255, 255, 255, 0.2)"
             >
               <div class="text-4xl mb-3">📱</div>
-              <h4 class="font-bold text-lg mb-2">WhatsApp</h4>
-              <p class="text-sm">+52 123 456 7890</p>
+              <h4 class="font-bold text-lg mb-2">Phone</h4>
+              <p class="text-xs">+959 266 767 771</p>
+              <p class="text-xs">+66 099 350 5076</p>
             </div>
             <div
               class="p-6 rounded-xl backdrop-blur-sm"
@@ -865,7 +897,7 @@
             >
               <div class="text-4xl mb-3">📍</div>
               <h4 class="font-bold text-lg mb-2">Location</h4>
-              <p class="text-sm">Mexico City, México</p>
+              <p class="text-sm">Mexico City,</p>
             </div>
           </div>
         </div>
@@ -890,9 +922,140 @@
           <p class="text-sm italic opacity-90 mb-4">
             "May all beings be happy, peaceful, and free from suffering"
           </p>
-          <p class="text-xs opacity-60">© 2024 All rights reserved</p>
+          <p class="text-xs opacity-60">
+            © 2026 All rights reserved 🪷 website created by Delulu Future Dev
+          </p>
         </div>
       </footer>
+      <!-- Chatbot Widget -->
+      <div
+        id="chat-button"
+        class="fixed bottom-6 right-6 z-50 cursor-pointer hover:scale-110 transition-transform duration-300"
+      >
+        <div
+          class="w-16 h-16 rounded-full flex items-center justify-center shadow-2xl lotus-pulse"
+          style="background: linear-gradient(135deg, #57329d, #e51d70)"
+        >
+          <span class="text-3xl">💬</span>
+        </div>
+      </div>
+      <div
+        id="chat-widget"
+        class="fixed bottom-24 right-6 w-80 md:w-96 bg-white rounded-3xl z-50 hidden flex-col"
+        style="height: 500px; max-height: 80%"
+      >
+        <!-- Chat Header -->
+        <div
+          class="p-4 rounded-t-3xl text-white flex items-center justify-between"
+          style="background: linear-gradient(135deg, #57329d, #e51d70)"
+        >
+          <div class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 rounded-full overflow-hidden border-2 border-white"
+            >
+              <img
+                src="https://raw.githubusercontent.com/wuweiclomx/Pynnyanada2026/refs/heads/main/2026.1.png"
+                alt="Venerable"
+                class="w-full h-full object-cover"
+                loading="lazy"
+                onerror="this.parentElement.innerHTML='<div class=\'w-10 h-10 flex items-center justify-center text-2xl\' style=\'background: white; color: #57329d;\'>🙏</div>';"
+              />
+            </div>
+            <div>
+              <h4 class="font-bold">Metta Bot</h4>
+              <p class="text-xs opacity-90">Ask about meditation classes</p>
+            </div>
+          </div>
+          <button
+            id="chat-close"
+            class="text-white hover:scale-110 transition-transform"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewbox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <!-- Chat Messages -->
+        <div
+          id="chat-messages"
+          class="chat-messages flex-1 overflow-y-auto p-4 space-y-4"
+          style="background-color: #fafafa"
+        >
+          <div class="flex gap-2">
+            <div class="chat-bubble-bot p-3 max-w-xs shadow-sm">
+              <p class="text-sm">
+                🙏 Greetings! I'm here to help you learn about our meditation
+                classes. How may I assist you today?
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Quick Reply Buttons -->
+        <div id="quick-replies" class="px-4 py-2 space-y-2">
+          <button
+            class="quick-reply-btn w-full text-left px-4 py-2 rounded-full text-sm font-medium transition-all hover:scale-105"
+            style="background-color: #f3e8ff; color: #57329d"
+            data-message="What classes do you offer?"
+          >
+            📚 What classes do you offer?
+          </button>
+          <button
+            class="quick-reply-btn w-full text-left px-4 py-2 rounded-full text-sm font-medium transition-all hover:scale-105"
+            style="background-color: #f3e8ff; color: #57329d"
+            data-message="How can I contact you?"
+          >
+            📧 How can I contact you?
+          </button>
+          <button
+            class="quick-reply-btn w-full text-left px-4 py-2 rounded-full text-sm font-medium transition-all hover:scale-105"
+            style="background-color: #f3e8ff; color: #57329d"
+            data-message="Tell me about Metta Bhavana"
+          >
+            🪷 Tell me about Metta Bhavana
+          </button>
+        </div>
+        <!-- Chat Input -->
+        <div class="p-4 border-t">
+          <form id="chat-form" class="flex gap-2">
+            <input
+              type="text"
+              id="chat-input"
+              placeholder="Type your message..."
+              class="chat-input flex-1 px-4 py-2 border-2 rounded-full text-sm"
+              style="border-color: #e5e7eb"
+            />
+            <button
+              type="submit"
+              class="w-10 h-10 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"
+              style="background: linear-gradient(135deg, #57329d, #e51d70)"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewbox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                ></path>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
     <script>
       // Mobile menu toggle
@@ -972,6 +1135,202 @@
         }, 1500);
       });
 
+      // Chatbot functionality
+      const chatButton = document.getElementById("chat-button");
+      const chatWidget = document.getElementById("chat-widget");
+      const chatClose = document.getElementById("chat-close");
+      const chatForm = document.getElementById("chat-form");
+      const chatInput = document.getElementById("chat-input");
+      const chatMessages = document.getElementById("chat-messages");
+      const quickReplyBtns = document.querySelectorAll(".quick-reply-btn");
+
+      // Bot knowledge base
+      const botResponses = {
+        classes: {
+          keywords: [
+            "class",
+            "classes",
+            "course",
+            "sessions",
+            "offer",
+            "teach",
+            "learn",
+          ],
+          response:
+            "🪷 We offer several types of meditation classes:\n\n• Group Meditation Classes - Learn Metta Bhavana in community\n• Private Sessions - One-on-one guidance tailored to you\n• Online Classes - Practice from anywhere\n\nAll classes focus on cultivating loving-kindness, compassion, and inner peace. Would you like to know more about any specific type?",
+        },
+        contact: {
+          keywords: [
+            "contact",
+            "email",
+            "phone",
+            "reach",
+            "call",
+            "message",
+            "whatsapp",
+          ],
+          response:
+            "📧 You can reach us through:\n\n📧 Email: Pyinnyananda12@gmail.com\n\n📱 Phone:\n• Myanmar: +959 266 767 771\n• Thailand: +66 099 350 5076\n\n📍 Location: Mexico City, México\n\nFeel free to contact us anytime! 🙏",
+        },
+        metta: {
+          keywords: [
+            "metta",
+            "loving-kindness",
+            "meditation",
+            "practice",
+            "bhavana",
+            "compassion",
+          ],
+          response:
+            "💜 Metta Bhavana is the practice of cultivating loving-kindness meditation. It develops:\n\n• Unconditional love for all beings\n• Deep compassion (Karuna)\n• Sympathetic joy (Mudita)\n• Equanimity (Upekkha)\n\nThrough regular practice, you experience inner peace, emotional healing, and boundless compassion. Would you like to join a class? 🪷",
+        },
+        teacher: {
+          keywords: [
+            "teacher",
+            "venerable",
+            "pyinnyananda",
+            "who",
+            "instructor",
+            "about you",
+            "background",
+          ],
+          response:
+            "🙏 Venerable PYINNYANANDA is a Buddhist monk with over 20 years of practice:\n\n• 15 years at Pegu Pali University, Myanmar\n• BA & MA in Buddhism from Thailand & Sri Lanka\n• Ph.D. Candidate at Lumbini Buddhist University, Nepal\n• Professor at Kyunhla Buddhist University\n• Metta Bhavana instructor since 2022\n\nHe shares wisdom inspired by Green Tara and Avalokitesvara.",
+        },
+        schedule: {
+          keywords: [
+            "schedule",
+            "when",
+            "time",
+            "timing",
+            "hours",
+            "availability",
+          ],
+          response:
+            "📅 We offer flexible scheduling options:\n\n• Group classes: Multiple times weekly\n• Private sessions: By appointment\n• Online classes: Various time zones available\n\nPlease contact us to discuss the best schedule for you. We accommodate different time zones and personal needs. 🕐",
+        },
+        location: {
+          keywords: ["where", "location", "address", "place", "mexico", "city"],
+          response:
+            "📍 We are based in Mexico City, México.\n\nWe offer:\n• In-person classes in Mexico City\n• Online classes for international students\n\nContact us for specific location details and directions! 🗺️",
+        },
+        price: {
+          keywords: [
+            "price",
+            "cost",
+            "fee",
+            "payment",
+            "how much",
+            "expensive",
+          ],
+          response:
+            "💰 For pricing information and class packages, please contact us directly:\n\n📧 Pyinnyananda12@gmail.com\n📱 +959 266 767 771\n\nWe offer various options to make meditation accessible to everyone. Dana (generosity) is an important part of Buddhist practice. 🙏",
+        },
+        beginner: {
+          keywords: [
+            "beginner",
+            "start",
+            "new",
+            "first time",
+            "never",
+            "experience",
+          ],
+          response:
+            "🌱 Beginners are warmly welcome! Our classes are perfect for those new to meditation.\n\nWe guide you step-by-step through:\n• Basic meditation posture\n• Breathing techniques\n• Metta Bhavana practice\n• The Four Immeasurables\n\nNo prior experience needed. Just bring an open heart and willingness to learn! 💚",
+        },
+      };
+
+      // Toggle chat widget
+      chatButton.addEventListener("click", () => {
+        chatWidget.classList.remove("hidden");
+        chatWidget.classList.add("flex");
+        chatButton.style.display = "none";
+      });
+
+      chatClose.addEventListener("click", () => {
+        chatWidget.classList.add("hidden");
+        chatWidget.classList.remove("flex");
+        chatButton.style.display = "block";
+      });
+
+      // Add message to chat
+      function addMessage(message, isUser = false) {
+        const messageDiv = document.createElement("div");
+        messageDiv.className = `flex gap-2 ${isUser ? "justify-end" : ""}`;
+
+        const bubbleDiv = document.createElement("div");
+        bubbleDiv.className = `${
+          isUser ? "chat-bubble-user" : "chat-bubble-bot"
+        } p-3 max-w-xs shadow-sm`;
+
+        const textP = document.createElement("p");
+        textP.className = "text-sm whitespace-pre-line";
+        textP.textContent = message;
+
+        bubbleDiv.appendChild(textP);
+        messageDiv.appendChild(bubbleDiv);
+        chatMessages.appendChild(messageDiv);
+
+        // Scroll to bottom
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+
+      // Get bot response
+      function getBotResponse(userMessage) {
+        const lowerMessage = userMessage.toLowerCase();
+
+        // Check for greetings
+        if (/^(hi|hello|hey|greetings|namaste)/.test(lowerMessage)) {
+          return "🙏 Namaste! Welcome to Metta Bhavana. How may I assist you on your journey of loving-kindness today?";
+        }
+
+        // Check for gratitude
+        if (/(thank|thanks|appreciate)/.test(lowerMessage)) {
+          return "🙏 You're most welcome! May you be happy and peaceful. Feel free to ask anything else about our meditation classes. 💜";
+        }
+
+        // Check knowledge base
+        for (const [category, data] of Object.entries(botResponses)) {
+          if (data.keywords.some((keyword) => lowerMessage.includes(keyword))) {
+            return data.response;
+          }
+        }
+
+        // Default response
+        return "🪷 Thank you for your question. For detailed information, please feel free to:\n\n📧 Email: Pyinnyananda12@gmail.com\n📱 Call: +959 266 767 771\n\nOr try asking about:\n• Our classes\n• Metta Bhavana practice\n• Schedule and location\n• Getting started as a beginner\n\nHow else may I help you? 🙏";
+      }
+
+      // Handle form submission
+      chatForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const userMessage = chatInput.value.trim();
+        if (!userMessage) return;
+
+        // Add user message
+        addMessage(userMessage, true);
+        chatInput.value = "";
+
+        // Simulate typing delay
+        setTimeout(() => {
+          const botResponse = getBotResponse(userMessage);
+          addMessage(botResponse, false);
+        }, 800);
+      });
+
+      // Handle quick reply buttons
+      quickReplyBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const message = btn.getAttribute("data-message");
+          addMessage(message, true);
+
+          setTimeout(() => {
+            const botResponse = getBotResponse(message);
+            addMessage(botResponse, false);
+          }, 800);
+        });
+      });
+
       if (window.elementSdk) {
         window.elementSdk.init({
           defaultConfig: {},
@@ -993,7 +1352,7 @@
           if (b) {
             var d = b.createElement("script");
             d.innerHTML =
-              "window.__CF$cv$params={r:'9beac46672aaac50',t:'MTc2ODUzNjY2OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+              "window.__CF$cv$params={r:'9beae78683aeac50',t:'MTc2ODUzODEwOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
             b.getElementsByTagName("head")[0].appendChild(d);
           }
         }
