@@ -974,45 +974,40 @@
       const mobileMenuBtn = document.getElementById("mobile-menu-btn");
       const mobileMenu = document.getElementById("mobile-menu");
 
-      mobileMenuBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-
-      // Smooth scroll navigation
-      document.querySelectorAll(".nav-link").forEach((link) => {
-        link.addEventListener("click", function (e) {
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener("click", (e) => {
           e.preventDefault();
-          const targetId = this.getAttribute("href");
-          const targetSection = document.querySelector(targetId);
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
 
-          if (targetSection) {
-            const offsetTop = targetSection.offsetTop - 64;
-            window.scrollTo({
-              top: offsetTop,
-              behavior: "smooth",
-            });
-          }
+      // Smooth scroll for all navigation links
+      function smoothScrollToSection(targetId) {
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+          const offsetTop = targetSection.offsetTop - 64;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: "smooth",
+          });
 
-          // Close mobile menu
-          if (!mobileMenu.classList.contains("hidden")) {
+          // Close mobile menu if open
+          if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
             mobileMenu.classList.add("hidden");
           }
-        });
-      });
+        }
+      }
 
-      // Join button smooth scroll
-      document.querySelectorAll(".join-btn").forEach((btn) => {
-        btn.addEventListener("click", function (e) {
+      // Add event listeners to all nav links
+      document.addEventListener("click", function (e) {
+        const target = e.target.closest('a[href^="#"]');
+        if (target) {
           e.preventDefault();
-          const contactSection = document.querySelector("#contact");
-          if (contactSection) {
-            const offsetTop = contactSection.offsetTop - 64;
-            window.scrollTo({
-              top: offsetTop,
-              behavior: "smooth",
-            });
+          const href = target.getAttribute("href");
+          if (href && href.length > 1) {
+            smoothScrollToSection(href);
           }
-        });
+        }
       });
 
       // Chatbot functionality
@@ -1232,7 +1227,7 @@
           if (b) {
             var d = b.createElement("script");
             d.innerHTML =
-              "window.__CF$cv$params={r:'9beba9d2b691ac50',t:'MTc2ODU0NjA2Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+              "window.__CF$cv$params={r:'9bebb342406cac50',t:'MTc2ODU0NjQ1My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
             b.getElementsByTagName("head")[0].appendChild(d);
           }
         }
