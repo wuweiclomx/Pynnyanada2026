@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="my" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>အထောက်အကူပြု တရားထိုင်သင်တန်း</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/_sdk/element_sdk.js"></script>
+    <style>
+      body {
+        box-sizing: border-box;
+      }
+
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@300;400;500;600;700&display=swap");
+
+      * {
+        font-family: "Noto Sans Myanmar", sans-serif;
+      }
+
+      .gradient-bg {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+
+      .card-hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .lotus-pattern {
+        background-image: radial-gradient(
+            circle at 20% 50%,
+            rgba(255, 255, 255, 0.05) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 80%,
+            rgba(255, 255, 255, 0.05) 0%,
+            transparent 50%
+          );
+      }
+
+      .fade-in {
+        animation: fadeIn 1s ease-in;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .stagger-1 {
+        animation-delay: 0.1s;
+      }
+      .stagger-2 {
+        animation-delay: 0.2s;
+      }
+      .stagger-3 {
+        animation-delay: 0.3s;
+      }
+      .stagger-4 {
+        animation-delay: 0.4s;
+      }
+    </style>
+    <style>
+      @view-transition {
+        navigation: auto;
+      }
+    </style>
+    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  </head>
+  <body class="h-full">
+    <div class="w-full h-full overflow-auto">
+      <!-- Hero Section -->
+      <section
+        class="gradient-bg lotus-pattern text-white py-20 px-6 text-center"
+      >
+        <div class="max-w-4xl mx-auto fade-in">
+          <div class="text-6xl mb-6">🧘‍♀️</div>
+          <h1 id="main-title" class="text-5xl font-bold mb-4">
+            စိတ်အေးချမ်းမှု ရှာဖွေပါ
+          </h1>
+          <p id="subtitle" class="text-xl mb-8 opacity-90">
+            တရားထိုင်ခြင်းဖြင့် သင့်ဘဝကို ပြောင်းလဲလိုက်ပါ
+          </p>
+          <button
+            id="cta-button"
+            class="px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+            style="background-color: #e51d70; color: white"
+          >
+            ယခုပဲ စတင်လိုက်ပါ
+          </button>
+        </div>
+      </section>
+      <!-- About Section -->
+      <section class="py-16 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-12 fade-in stagger-1">
+            <h2 id="about-title" class="text-4xl font-bold text-gray-800 mb-4">
+              ကျွန်ုပ်တို့အကြောင်း
+            </h2>
+            <p id="about-text" class="text-lg text-gray-600 max-w-2xl mx-auto">
+              ၁၀ နှစ်ကျော် အတွေ့အကြုံရှိသော တရားဆရာများနှင့်အတူ သင့်စိတ်ဓာတ်ကို
+              ခိုင်မာစေပြီး စိတ်အေးချမ်းမှုကို ရရှိစေပါ။
+            </p>
+          </div>
+          <!-- Benefits Grid -->
+          <div class="mb-16">
+            <h3
+              id="benefits-title"
+              class="text-3xl font-bold text-center text-gray-800 mb-10"
+            >
+              အကျိုးကျေးဇူးများ
+            </h3>
+            <div class="grid md:grid-cols-3 gap-8">
+              <div
+                class="bg-purple-50 p-8 rounded-2xl card-hover fade-in stagger-2"
+              >
+                <div class="text-5xl mb-4">🧠</div>
+                <h4 class="text-xl font-semibold text-gray-800 mb-3">
+                  စိတ်ပိုင်း ကျန်းမာရေ���
+                </h4>
+                <p class="text-gray-600">
+                  စိတ်ဖိစီးမှု လျော့ကျ���ေပြီး စိတ်ပ��ု��်းဆိုင်ရာ တည်ငြိမ်မှု
+                  တိုးတက်စေသည်
+                </p>
+              </div>
+              <div
+                class="bg-indigo-50 p-8 rounded-2xl card-hover fade-in stagger-3"
+              >
+                <div class="text-5xl mb-4">💪</div>
+                <h4 class="text-xl font-semibold text-gray-800 mb-3">
+                  ခန္ဓာကိုယ် ကျန်းမာရေး
+                </h4>
+                <p class="text-gray-600">
+                  သွေးပေါင်ချိန် ထိန်းညှိပေးပြီး ကိုယ်ခံအား မြင့်မားစေသည်
+                </p>
+              </div>
+              <div
+                class="bg-purple-50 p-8 rounded-2xl card-hover fade-in stagger-4"
+              >
+                <div class="text-5xl mb-4">✨</div>
+                <h4 class="text-xl font-semibold text-gray-800 mb-3">
+                  စိတ်တည်ငြိမ်မှု
+                </h4>
+                <p class="text-gray-600">
+                  အာရုံ���ူးစိုက်မှု ပ��ု����ုကောင်းမွန်လာပြီး စိတ်အေးချမ်းမှု
+                  ရရှိသည်
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Schedule Section -->
+          <div
+            class="bg-gradient-to-br from-purple-100 to-indigo-100 rounded-3xl p-10"
+          >
+            <h3
+              id="schedule-title"
+              class="text-3xl font-bold text-center text-gray-800 mb-8"
+            >
+              သင်တန်းအချိန်စာရ��်း
+            </h3>
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <div class="bg-white p-6 rounded-xl shadow-md">
+                <div class="flex items-center mb-3">
+                  <span class="text-3xl mr-3">🌅</span>
+                  <div>
+                    <h4 class="font-semibold text-lg text-gray-800">
+                      နံနက်သင်တန်း
+                    </h4>
+                    <p class="text-gray-600">နံနက် ၆:၀၀ - ၇:၃၀</p>
+                  </div>
+                </div>
+                <p class="text-gray-600 text-sm">တနင်္လာ၊ ဗုဒ္ဓဟူး၊ သောကြာ</p>
+              </div>
+              <div class="bg-white p-6 rounded-xl shadow-md">
+                <div class="flex items-center mb-3">
+                  <span class="text-3xl mr-3">🌆</span>
+                  <div>
+                    <h4 class="font-semibold text-lg text-gray-800">
+                      ညနေသ���်တန်း
+                    </h4>
+                    <p class="text-gray-600">ညနေ ၆:၀၀ - ၇:၃၀</p>
+                  </div>
+                </div>
+                <p class="text-gray-600 text-sm">အင်္ဂါ၊ ကြာသပတေး၊ စနေ</p>
+              </div>
+              <div class="bg-white p-6 rounded-xl shadow-md">
+                <div class="flex items-center mb-3">
+                  <span class="text-3xl mr-3">🌙</span>
+                  <div>
+                    <h4 class="font-semibold text-lg text-gray-800">
+                      ညသင်တန်း
+                    </h4>
+                    <p class="text-gray-600">ည ၈:၀၀ - ၉:၀၀</p>
+                  </div>
+                </div>
+                <p class="text-gray-600 text-sm">သောကြာနေ့</p>
+              </div>
+              <div class="bg-white p-6 rounded-xl shadow-md">
+                <div class="flex items-center mb-3">
+                  <span class="text-3xl mr-3">☀️</span>
+                  <div>
+                    <h4 class="font-semibold text-lg text-gray-800">
+                      စနေ/တနင်္ဂနွေ အထူးသင်တန်း
+                    </h4>
+                    <p class="text-gray-600">နံနက် ၉:၀၀ - ၁၁:၀၀</p>
+                  </div>
+                </div>
+                <p class="text-gray-600 text-sm">အစပြုသူများအတွက်</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Section -->
+      <section
+        class="py-16 px-6 text-center text-white"
+        style="background: linear-gradient(135deg, #edb007 0%, #e51d70 100%)"
+      >
+        <div class="max-w-3xl mx-auto">
+          <h3 class="text-4xl font-bold mb-4">
+            သင့်ခရီးစဉ်ကို ယနေ့ပဲ စတင်လိုက်ပါ
+          </h3>
+          <p class="text-xl mb-8 opacity-90">
+            ပထမအကြိမ် အခမဲ့ သင်တန်းတက်နိုင်ပါသည်
+          </p>
+          <button
+            class="px-10 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+            style="background-color: #28b133; color: white"
+          >
+            📞 ဆက်သွယ်ရန် - ၀၉-၁၂၃-၄၅၆-၇၈၉
+          </button>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer class="bg-gray-900 text-gray-300 py-8 px-6 text-center">
+        <p id="footer-text" class="mb-4">
+          © ၂၀၂၄ တရားထိုင်သင်တန်း။ မ��ပိုင်ခွင့်များ လက်ဝယ်၌ရှိသည်။
+        </p>
+        <div class="flex justify-center space-x-6 text-2xl">
+          <span>📧</span> <span>📱</span> <span>🌐</span>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const defaultConfig = {
+        background_color: "#667eea",
+        secondary_surface_color: "#ffffff",
+        text_color: "#1f2937",
+        primary_action_color: "#7c3aed",
+        secondary_action_color: "#6366f1",
+        font_family: "Noto Sans Myanmar",
+        font_size: 16,
+        main_title: "စိတ်အေးချမ်းမှု ရှာဖွေပါ",
+        subtitle: "တရားထိုင်ခြင်းဖြင့် သင့်ဘဝကို ပြောင်းလဲလိုက်ပါ",
+        cta_button: "ယခုပဲ စတင်လိုက်ပါ",
+        about_title: "ကျွန်ုပ်တို့အကြောင်���",
+        about_text:
+          "၁၀ ��ှစ်ကျော် အတွေ့အကြုံရှိသော တရားဆရာများနှင့်အတူ သင့်စိတ်ဓာတ်ကို ခိုင်မာစေပြီး စိတ်အေးချမ်းမှုကို ရရှိစေပါ။",
+        benefits_title: "အကျိုးကျေးဇူးများ",
+        schedule_title: "သင်တန်းအချိန်စာရင်း",
+        footer_text: "© ၂၀၂၄ တရားထိုင်သင်တန်း။ မူပိုင်ခွင့်များ လက်ဝယ်၌ရှိသည်။",
+      };
+
+      async function onConfigChange(config) {
+        const customFont = config.font_family || defaultConfig.font_family;
+        const baseFontStack = "system-ui, -apple-system, sans-serif";
+        const baseSize = config.font_size || defaultConfig.font_size;
+
+        const backgroundColor =
+          config.background_color || defaultConfig.background_color;
+        const secondarySurfaceColor =
+          config.secondary_surface_color ||
+          defaultConfig.secondary_surface_color;
+        const textColor = config.text_color || defaultConfig.text_color;
+        const primaryActionColor =
+          config.primary_action_color || defaultConfig.primary_action_color;
+        const secondaryActionColor =
+          config.secondary_action_color || defaultConfig.secondary_action_color;
+
+        // Apply colors
+        const heroSection = document.querySelector(".gradient-bg");
+        heroSection.style.background = `linear-gradient(135deg, ${backgroundColor} 0%, ${secondaryActionColor} 100%)`;
+
+        document.body.style.backgroundColor = secondarySurfaceColor;
+
+        const cards = document.querySelectorAll(
+          ".bg-purple-50, .bg-indigo-50, .bg-green-100, .bg-yellow-100, .bg-pink-100"
+        );
+        cards.forEach((card) => {
+          card.style.backgroundColor = secondarySurfaceColor;
+          card.style.border = `2px solid ${backgroundColor}20`;
+        });
+
+        const allText = document.querySelectorAll(
+          "h1, h2, h3, h4, p:not(.text-white)"
+        );
+        allText.forEach((el) => {
+          el.style.color = textColor;
+        });
+
+        const primaryButtons = document.querySelectorAll("#cta-button");
+        primaryButtons.forEach((btn) => {
+          btn.style.backgroundColor = secondarySurfaceColor;
+          btn.style.color = primaryActionColor;
+        });
+
+        const secondaryButtons = document.querySelectorAll(
+          "section.bg-gradient-to-r button"
+        );
+        secondaryButtons.forEach((btn) => {
+          btn.style.backgroundColor = secondarySurfaceColor;
+          btn.style.color = secondaryActionColor;
+        });
+
+        // Apply fonts
+        document.body.style.fontFamily = `${customFont}, ${baseFontStack}`;
+
+        // Apply font sizes
+        document.getElementById("main-title").style.fontSize = `${
+          baseSize * 2
+        }px`;
+        document.getElementById("subtitle").style.fontSize = `${
+          baseSize * 1.25
+        }px`;
+        document.getElementById("cta-button").style.fontSize = `${
+          baseSize * 1.125
+        }px`;
+
+        const h2Elements = document.querySelectorAll("h2");
+        h2Elements.forEach(
+          (el) => (el.style.fontSize = `${baseSize * 1.75}px`)
+        );
+
+        const h3Elements = document.querySelectorAll("h3");
+        h3Elements.forEach((el) => (el.style.fontSize = `${baseSize * 1.5}px`));
+
+        const h4Elements = document.querySelectorAll("h4");
+        h4Elements.forEach(
+          (el) => (el.style.fontSize = `${baseSize * 1.25}px`)
+        );
+
+        const paragraphs = document.querySelectorAll("p");
+        paragraphs.forEach((el) => (el.style.fontSize = `${baseSize}px`));
+
+        // Apply text content
+        document.getElementById("main-title").textContent =
+          config.main_title || defaultConfig.main_title;
+        document.getElementById("subtitle").textContent =
+          config.subtitle || defaultConfig.subtitle;
+        document.getElementById("cta-button").textContent =
+          config.cta_button || defaultConfig.cta_button;
+        document.getElementById("about-title").textContent =
+          config.about_title || defaultConfig.about_title;
+        document.getElementById("about-text").textContent =
+          config.about_text || defaultConfig.about_text;
+        document.getElementById("teacher-title").textContent =
+          config.teacher_title || defaultConfig.teacher_title;
+        document.getElementById("teacher-name").textContent =
+          config.teacher_name || defaultConfig.teacher_name;
+        document.getElementById("teacher-intro").textContent =
+          config.teacher_intro || defaultConfig.teacher_intro;
+        document.getElementById("benefits-title").textContent =
+          config.benefits_title || defaultConfig.benefits_title;
+        document.getElementById("schedule-title").textContent =
+          config.schedule_title || defaultConfig.schedule_title;
+        document.getElementById("footer-text").textContent =
+          config.footer_text || defaultConfig.footer_text;
+      }
+
+      function mapToCapabilities(config) {
+        return {
+          recolorables: [
+            {
+              get: () =>
+                config.background_color || defaultConfig.background_color,
+              set: (value) => {
+                config.background_color = value;
+                window.elementSdk.setConfig({ background_color: value });
+              },
+            },
+            {
+              get: () =>
+                config.secondary_surface_color ||
+                defaultConfig.secondary_surface_color,
+              set: (value) => {
+                config.secondary_surface_color = value;
+                window.elementSdk.setConfig({ secondary_surface_color: value });
+              },
+            },
+            {
+              get: () => config.text_color || defaultConfig.text_color,
+              set: (value) => {
+                config.text_color = value;
+                window.elementSdk.setConfig({ text_color: value });
+              },
+            },
+            {
+              get: () =>
+                config.primary_action_color ||
+                defaultConfig.primary_action_color,
+              set: (value) => {
+                config.primary_action_color = value;
+                window.elementSdk.setConfig({ primary_action_color: value });
+              },
+            },
+            {
+              get: () =>
+                config.secondary_action_color ||
+                defaultConfig.secondary_action_color,
+              set: (value) => {
+                config.secondary_action_color = value;
+                window.elementSdk.setConfig({ secondary_action_color: value });
+              },
+            },
+          ],
+          borderables: [],
+          fontEditable: {
+            get: () => config.font_family || defaultConfig.font_family,
+            set: (value) => {
+              config.font_family = value;
+              window.elementSdk.setConfig({ font_family: value });
+            },
+          },
+          fontSizeable: {
+            get: () => config.font_size || defaultConfig.font_size,
+            set: (value) => {
+              config.font_size = value;
+              window.elementSdk.setConfig({ font_size: value });
+            },
+          },
+        };
+      }
+
+      function mapToEditPanelValues(config) {
+        return new Map([
+          ["main_title", config.main_title || defaultConfig.main_title],
+          ["subtitle", config.subtitle || defaultConfig.subtitle],
+          ["cta_button", config.cta_button || defaultConfig.cta_button],
+          ["about_title", config.about_title || defaultConfig.about_title],
+          ["about_text", config.about_text || defaultConfig.about_text],
+          [
+            "teacher_title",
+            config.teacher_title || defaultConfig.teacher_title,
+          ],
+          ["teacher_name", config.teacher_name || defaultConfig.teacher_name],
+          [
+            "teacher_intro",
+            config.teacher_intro || defaultConfig.teacher_intro,
+          ],
+          [
+            "benefits_title",
+            config.benefits_title || defaultConfig.benefits_title,
+          ],
+          [
+            "schedule_title",
+            config.schedule_title || defaultConfig.schedule_title,
+          ],
+          ["footer_text", config.footer_text || defaultConfig.footer_text],
+        ]);
+      }
+
+      if (window.elementSdk) {
+        window.elementSdk.init({
+          defaultConfig,
+          onConfigChange,
+          mapToCapabilities,
+          mapToEditPanelValues,
+        });
+      }
+    </script>
+    <script>
+      (function () {
+        function c() {
+          var b = a.contentDocument || a.contentWindow.document;
+          if (b) {
+            var d = b.createElement("script");
+            d.innerHTML =
+              "window.__CF$cv$params={r:'9bea7fec07eaac50',t:'MTc2ODUzMzg2NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName("head")[0].appendChild(d);
+          }
+        }
+        if (document.body) {
+          var a = document.createElement("iframe");
+          a.height = 1;
+          a.width = 1;
+          a.style.position = "absolute";
+          a.style.top = 0;
+          a.style.left = 0;
+          a.style.border = "none";
+          a.style.visibility = "hidden";
+          document.body.appendChild(a);
+          if ("loading" !== document.readyState) c();
+          else if (window.addEventListener)
+            document.addEventListener("DOMContentLoaded", c);
+          else {
+            var e = document.onreadystatechange || function () {};
+            document.onreadystatechange = function (b) {
+              e(b);
+              "loading" !== document.readyState &&
+                ((document.onreadystatechange = e), c());
+            };
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
