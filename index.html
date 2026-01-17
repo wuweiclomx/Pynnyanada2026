@@ -974,40 +974,31 @@
       const mobileMenuBtn = document.getElementById("mobile-menu-btn");
       const mobileMenu = document.getElementById("mobile-menu");
 
-      if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener("click", (e) => {
+      mobileMenuBtn.onclick = function (e) {
+        e.preventDefault();
+        mobileMenu.classList.toggle("hidden");
+      };
+
+      // Smooth scroll for all anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.onclick = function (e) {
           e.preventDefault();
-          mobileMenu.classList.toggle("hidden");
-        });
-      }
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
 
-      // Smooth scroll for all navigation links
-      function smoothScrollToSection(targetId) {
-        const targetSection = document.querySelector(targetId);
-        if (targetSection) {
-          const offsetTop = targetSection.offsetTop - 64;
-          window.scrollTo({
-            top: offsetTop,
-            behavior: "smooth",
-          });
+          if (targetElement) {
+            const offsetPosition = targetElement.offsetTop - 64;
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth",
+            });
 
-          // Close mobile menu if open
-          if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
-            mobileMenu.classList.add("hidden");
+            // Close mobile menu
+            if (!mobileMenu.classList.contains("hidden")) {
+              mobileMenu.classList.add("hidden");
+            }
           }
-        }
-      }
-
-      // Add event listeners to all nav links
-      document.addEventListener("click", function (e) {
-        const target = e.target.closest('a[href^="#"]');
-        if (target) {
-          e.preventDefault();
-          const href = target.getAttribute("href");
-          if (href && href.length > 1) {
-            smoothScrollToSection(href);
-          }
-        }
+        };
       });
 
       // Chatbot functionality
@@ -1082,12 +1073,12 @@
             "availability",
           ],
           response:
-            "📅 We offer flexible scheduling options:\n\n• Group classes: Multiple times weekly\n• Private sessions: By appointment\n• Online classes: Various time zones available\n\nPlease contact us to discuss the best schedule for you. We accommodate different time zones and personal needs. 🕐",
+            "📅 We offer flexible scheduling options:\n\n��� Group classes: Multiple times weekly\n• Private sessions: By appointment\n• Online classes: Various time zones available\n\nPlease contact us to discuss the best schedule for you. We accommodate different time zones and personal needs. 🕐",
         },
         location: {
           keywords: ["where", "location", "address", "place", "mexico", "city"],
           response:
-            "📍 We are based in Mexico City, México.\n\nWe offer:\n• In-person classes in Mexico City\n• Online classes for international students\n\nContact us for specific location details and directions! 🗺️",
+            "📍 We are based in Mexico City, México.\n\nWe offer:\n• In-person classes in Mexico City\n�� Online classes for international students\n\nContact us for specific location details and directions! 🗺️",
         },
         price: {
           keywords: [
@@ -1172,7 +1163,7 @@
         }
 
         // Default response
-        return "🪷 Thank you for your question. For detailed information, please feel free to:\n\n📧 Email: Pyinnyananda12@gmail.com\n📱 Call: +959 266 767 771\n\nOr try asking about:\n• Our classes\n• Metta Bhavana practice\n• Schedule and location\n• Getting started as a beginner\n\nHow else may I help you? 🙏";
+        return "🪷 Thank you for your question. For detailed information, please feel free to:\n\n📧 Email: Pyinnyananda12@gmail.com\n📱 Call: +959 266 767 771\n\nOr try asking about:\n• Our classes\n• Metta Bhavana practice\n��� Schedule and location\n• Getting started as a beginner\n\nHow else may I help you? 🙏";
       }
 
       // Handle form submission
@@ -1227,7 +1218,7 @@
           if (b) {
             var d = b.createElement("script");
             d.innerHTML =
-              "window.__CF$cv$params={r:'9bebb342406cac50',t:'MTc2ODU0NjQ1My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+              "window.__CF$cv$params={r:'9bf2a613436aac50',t:'MTc2ODYxOTMxMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
             b.getElementsByTagName("head")[0].appendChild(d);
           }
         }
